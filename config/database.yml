@@ -14,14 +14,14 @@ default: &default
 
 development:
   <<: *default
-  database: achievement_app_development
+  database: achievement_app1_development
 
 test: &test
   <<: *default
-  database: achievement_app_test
+  database: achievement_app1_test
 
 production:
   <<: *default
-  database: achievement_app_production
+  database: achievement_app1_production
 cucumber:
   <<: *test

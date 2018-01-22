@@ -1,0 +1,2 @@
+class Achievementt < ApplicationRecord
+end
