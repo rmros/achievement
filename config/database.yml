@@ -1,0 +1,27 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  
+  username: postgres
+  password: 
+  host: db
+  
+  # username: yaro
+  # password: pass
+  # host:     <%= ENV['IP'] %>
+  
+
+development:
+  <<: *default
+  database: achievement_development
+
+test: &test
+  <<: *default
+  database: achievement_test
+
+production:
+  <<: *default
+  database: achievement_production
+cucumber:
+  <<: *test
