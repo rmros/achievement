@@ -7,7 +7,6 @@ default: &default
   password: 
   host: db
   
-  
   # username: yaro
   # password: pass
   # host:     <%= ENV['IP'] %>
