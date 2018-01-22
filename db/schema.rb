@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150629000724) do
+ActiveRecord::Schema.define(version: 20180122090827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,12 @@ ActiveRecord::Schema.define(version: 20150629000724) do
     t.integer "privacy"
     t.boolean "featured"
     t.string "cover_image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "deletemes", force: :cascade do |t|
+    t.string "messga"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
