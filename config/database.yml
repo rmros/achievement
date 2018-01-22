@@ -3,25 +3,25 @@ default: &default
   encoding: unicode
   pool: 5
   
-  username: postgres
-  password: 
-  host: db
+  # username: postgres
+  # password: 
+  # host: db
   
-  # username: yaro
-  # password: pass
-  # host:     <%= ENV['IP'] %>
+  username: yaro
+  password: pass
+  host:     <%= ENV['IP'] %>
   
 
 development:
   <<: *default
-  database: achievement_development
+  database: achievement_app_development
 
 test: &test
   <<: *default
-  database: achievement_test
+  database: achievement_app_test
 
 production:
   <<: *default
-  database: achievement_production
+  database: achievement_app_production
 cucumber:
   <<: *test
