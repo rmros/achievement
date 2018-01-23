@@ -37,7 +37,12 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'spring-commands-cucumber'
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
   # gem 'factory_girl_rails'
+  gem 'guard'
+  gem 'guard-livereload', '~> 2.5'
+  gem 'rack-livereload', '~> 0.3.16'
+  
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -47,8 +52,8 @@ group :test do
   gem 'capybara'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  gem 'launchy'
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  gem 'guard-rspec', require: false
 end
 
-group :development, :test do
-  gem 'factory_bot_rails'
-end
